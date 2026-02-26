@@ -1,4 +1,7 @@
-body, h1, h2, p {
+body,
+h1,
+h2,
+p {
     margin: 0;
     font-family: "Roboto", sans-serif;
 }
@@ -30,7 +33,7 @@ body, h1, h2, p {
     text-align: center;
     padding: 10px;
     border-bottom: 1px solid #ccc;
-    
+
 }
 
 h2 {
@@ -44,13 +47,14 @@ h2 {
     flex-wrap: wrap;
 }
 
-input, select {
+input,
+select {
     padding: 10px;
-     border: 1px solid #ccc;
-     border-radius: 5px;
-     width: 100%;
-     margin-bottom: 10px;
-     font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 15px;
 }
 
 .half-width {
@@ -64,7 +68,7 @@ input, select {
 
 }
 
-label{
+label {
     font-size: 15px;
     color: rgb(99, 95, 95);
     padding-bottom: 10px;
@@ -83,20 +87,20 @@ label{
 }
 
 .radio-div {
-     border: 1px solid #dbd9d9;
-     border-radius: 5px;
-     width: 100%;
-     padding: 5px;
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
+    border: 1px solid #dbd9d9;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
 }
 
 .radio-label {
     padding-bottom: 0;
     font-size: 15px;
-    color:  #1c1e21;
+    color: #1c1e21;
 }
 
 .radio-input {
@@ -127,9 +131,9 @@ a {
 .sign-btn {
     border: 0;
     background-color: green;
-    color:#fff;
+    color: #fff;
     padding: 8px 55px;
-    border-radius: 5px; 
+    border-radius: 5px;
     align-items: center;
     font-size: 18px;
     font-weight: 500;
@@ -142,5 +146,3 @@ a {
     padding-bottom: 15px;
     padding-top: 8px;
 }
-
-
