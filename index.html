@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,18 +37,18 @@
                     <label>Date Of Birth</label>
                     <div class="dob-div">
                         <div class="quat-width">
-                            <select>
-                                <option>1</option>
+                            <select id="day">
+                                <option value="">Day</option>
                             </select>
                         </div>
                         <div class="quat-width">
-                            <select>
-                                <option>1</option>
+                            <select id="month">
+                                <option value="">Month</option>
                             </select>
                         </div>
                         <div class="quat-width">
-                            <select>
-                                <option>1</option>
+                            <select id="year">
+                                <option value="">Year</option>
                             </select>
                         </div>
                     </div>
@@ -55,30 +56,59 @@
                     <div class="dob-div">
                         <div class="quat-width">
                             <div class="radio-div">
-                                <label class="radio-label">female</label>
-                                <input type="radio" class="radio-input" />
+                                <label class="radio-label">Female</label>
+                                <input type="radio" name="gender" value="female" class="radio-input" />
                             </div>
                         </div>
                         <div class="quat-width">
                             <div class="radio-div">
-                                <label class="radio-label">male</label>
-                                <input type="radio" class="radio-input" />
+                                <label class="radio-label">Male</label>
+                                <input type="radio" name="gender" value="male" class="radio-input" />
                             </div>
                         </div>
                         <div class="quat-width">
                             <div class="radio-div">
-                                <label class="radio-label">custom</label>
-                                <input type="radio" class="radio-input" />
+                                <label class="radio-label">Custom</label>
+                                <input type="radio" name="gender" value="custom" class="radio-input" />
                             </div>
                         </div>
                     </div>
                     <small>People who use our service may have uploaded your contact information to Facebook. <a
-                            href="https://www.facebook.com">learn more</a>
+                            href="https://www.facebook.com">Learn more</a>
                     </small>
                     <small>By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may
-                        receive SMS notifications from us and can opt out at any time
-
+                        receive SMS notifications from us and can opt out at any time.
                     </small>
+                    <script>
+                        // Populate Day
+                        const daySelect = document.getElementById('day');
+                        for (let i = 1; i <= 31; i++) {
+                            const option = document.createElement('option');
+                            option.value = i;
+                            option.textContent = i;
+                            daySelect.appendChild(option);
+                        }
+
+                        // Populate Month
+                        const monthSelect = document.getElementById('month');
+                        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                        months.forEach((month, index) => {
+                            const option = document.createElement('option');
+                            option.value = index + 1;
+                            option.textContent = month;
+                            monthSelect.appendChild(option);
+                        });
+
+                        // Populate Year
+                        const yearSelect = document.getElementById('year');
+                        const currentYear = new Date().getFullYear();
+                        for (let i = currentYear; i >= 1905; i--) {
+                            const option = document.createElement('option');
+                            option.value = i;
+                            option.textContent = i;
+                            yearSelect.appendChild(option);
+                        }
+                    </script>
                     <div class="button-div">
                         <button class="sign-btn">Sign up</button>
                     </div>
@@ -90,4 +120,5 @@
         </form>
     </div>
 </body>
+
 </html>

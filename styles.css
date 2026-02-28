@@ -50,11 +50,19 @@ h2 {
 input,
 select {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
     width: 100%;
     margin-bottom: 10px;
     font-size: 15px;
+    background-color: #f5f6f7;
+    transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus {
+    border-color: #1877f2;
+    outline: none;
 }
 
 .half-width {
@@ -70,43 +78,54 @@ select {
 
 label {
     font-size: 15px;
-    color: rgb(99, 95, 95);
-    padding-bottom: 10px;
+    font-weight: 600;
+    color: #606770;
+    padding-bottom: 8px;
+    display: block;
+    width: 100%;
 }
 
 .dob-div {
     display: flex;
     width: 100%;
     justify-content: space-between;
+    margin-bottom: 5px;
 }
 
 .quat-width {
-    width: 30%;
+    width: 32%;
     display: flex;
 
 }
 
 .radio-div {
-    border: 1px solid #dbd9d9;
-    border-radius: 5px;
+    border: 1px solid #dddfe2;
+    border-radius: 6px;
     width: 100%;
-    padding: 5px;
+    padding: 8px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.2s;
+}
 
+.radio-div:hover {
+    background-color: #f5f6f7;
 }
 
 .radio-label {
     padding-bottom: 0;
     font-size: 15px;
+    font-weight: normal;
     color: #1c1e21;
 }
 
 .radio-input {
     margin: 0;
-    width: auto;
-
+    width: 18px;
+    height: 18px;
 }
 
 small {
